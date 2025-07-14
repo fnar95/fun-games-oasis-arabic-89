@@ -4,6 +4,7 @@ import { games } from '@/data/games';
 import GameCard from '@/components/GameCard';
 import LanguageToggle from '@/components/LanguageToggle';
 
+
 const Index = () => {
   const { language } = useLanguage();
 
@@ -13,6 +14,20 @@ const Index = () => {
       
       <div className="container mx-auto px-4 py-12">
         <div className="text-center mb-12">
+          {/* Logo Section */}
+          <div className="flex justify-center mb-6">
+            <div className="relative group">
+              <div className="absolute -inset-2 bg-gradient-to-r from-indigo-500 via-purple-500 to-cyan-500 rounded-full opacity-20 group-hover:opacity-30 transition-opacity duration-300 blur-xl"></div>
+              <div className="relative bg-white/80 backdrop-blur-sm rounded-full p-4 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+                <img 
+                  src="/lovable-uploads/c712dd9c-9f23-4cd8-a5ad-f73b0f9c5dfd.png" 
+                  alt="استاذ فاضل" 
+                  className="w-20 h-20 object-contain"
+                />
+              </div>
+            </div>
+          </div>
+          
           <h1 className="text-5xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent mb-4">
             {language === 'en' ? 'Professor Fadel\'s Famous Popular Games' : 'العاب استاذ فاضل الشعبية الشهيرة'}
           </h1>
