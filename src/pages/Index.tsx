@@ -3,7 +3,7 @@ import { useLanguage } from '@/context/LanguageContext';
 import { games } from '@/data/games';
 import GameCard from '@/components/GameCard';
 import LanguageToggle from '@/components/LanguageToggle';
-import { ExternalLink, Twitter } from 'lucide-react';
+import { ExternalLink, Twitter, Youtube } from 'lucide-react';
 
 
 const Index = () => {
@@ -47,24 +47,47 @@ const Index = () => {
         </div>
 
         <div className="text-center mt-12 space-y-6">
-          {/* Twitter Follow Section */}
-          <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-6 max-w-md mx-auto shadow-lg border border-white/20">
-            <div className="flex items-center justify-center mb-4">
-              <Twitter className="w-8 h-8 text-blue-500 mr-3" />
-              <h3 className="text-xl font-semibold text-gray-800">
-                {language === 'en' ? 'Follow me on Twitter' : 'تابعني في تويتر'}
-              </h3>
+          {/* Social Media Section */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            {/* Twitter Follow Section */}
+            <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-white/20">
+              <div className="flex items-center justify-center mb-4">
+                <Twitter className="w-8 h-8 text-blue-500 mr-3" />
+                <h3 className="text-xl font-semibold text-gray-800">
+                  {language === 'en' ? 'Follow me on Twitter' : 'تابعني في تويتر'}
+                </h3>
+              </div>
+              <a 
+                href="https://x.com/Fnar9595" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center bg-gradient-to-r from-blue-500 to-blue-600 text-white px-6 py-3 rounded-xl font-medium hover:from-blue-600 hover:to-blue-700 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl w-full"
+              >
+                <Twitter className="w-5 h-5 mr-2" />
+                {language === 'en' ? 'Follow @Fnar9595' : 'تابع @Fnar9595'}
+                <ExternalLink className="w-4 h-4 ml-2" />
+              </a>
             </div>
-            <a 
-              href="https://x.com/Fnar9595" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center bg-gradient-to-r from-blue-500 to-blue-600 text-white px-6 py-3 rounded-xl font-medium hover:from-blue-600 hover:to-blue-700 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
-            >
-              <Twitter className="w-5 h-5 mr-2" />
-              {language === 'en' ? 'Follow @Fnar9595' : 'تابع @Fnar9595'}
-              <ExternalLink className="w-4 h-4 ml-2" />
-            </a>
+
+            {/* YouTube Subscribe Section */}
+            <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-white/20">
+              <div className="flex items-center justify-center mb-4">
+                <Youtube className="w-8 h-8 text-red-500 mr-3" />
+                <h3 className="text-xl font-semibold text-gray-800">
+                  {language === 'en' ? 'Subscribe to my YouTube' : 'اشترك بقناتي على اليوتيوب'}
+                </h3>
+              </div>
+              <a 
+                href="https://www.youtube.com/@%D9%81%D8%A7%D8%B6%D9%84%D8%A7%D9%84%D9%85%D8%A8%D8%A7%D8%B1%D9%83/featured" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center bg-gradient-to-r from-red-500 to-red-600 text-white px-6 py-3 rounded-xl font-medium hover:from-red-600 hover:to-red-700 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl w-full"
+              >
+                <Youtube className="w-5 h-5 mr-2" />
+                {language === 'en' ? 'Subscribe Now' : 'اشترك الآن'}
+                <ExternalLink className="w-4 h-4 ml-2" />
+              </a>
+            </div>
           </div>
 
           <p className="text-sm text-muted-foreground">
